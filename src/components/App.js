@@ -1,12 +1,25 @@
 import React from 'react'; // require('react')
 
 class App extends React.Component {
-    render(){
-
-        return (
-                <h1>Hello React</h1>
-        );
-    }
+  render(){
+    let text = 'Hello React World';
+    let style = {
+      color: 'aqua',
+      backgroundColor: 'black' // Camel Case 사용해야 함.
+    };
+    return (
+      <div style={style}>{text}</div>
+    );
+  }
 }
 
-export default App; // module.export = App
+// 컴포넌트에서 다른 컴포넌트를 사용 가능
+class OtherApp extends React.Component {
+  render() {
+    return (
+      <App/>
+    );
+  }
+}
+
+export default OtherApp; // module.export = App
