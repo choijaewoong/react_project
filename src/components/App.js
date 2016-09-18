@@ -38,14 +38,23 @@ class Props extends React.Component {
     );
   }
 }
-export class PropsState extends React.Component {
+class PropsState extends React.Component {
   render() {
     return (
-      <Props name="React">&#39;this.props.children&#39;는 Element안의 내용을 가지게 됩니다.</Props>
+      <div>
+        <Props name="React">&#39;this.props.children&#39;는 Element안의 내용을 가지게 됩니다.</Props>
+        {/* Router를 쓸경우 default 값을 설정 하지 않는 이상
+            이런 식의 문법을 쓸 수 없어 보임 */}
+        <Props name={this.props.name}>{this.props.value}</Props>
+      </div>
     );
   }
 }
-
+// PropsState의 기본값 설정
+PropsState.defaultProps = {
+  name: "Props World",
+  value: "기본 값을 설정 할 수 있습니다."
+}
 
 class App extends React.Component {
   render() {
