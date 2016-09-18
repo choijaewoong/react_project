@@ -7,7 +7,9 @@ class App extends React.Component {
       <div>
         <ol>
           <li><Link to="basic">01_Basic</Link></li>
-          <li><Link to="props_state">02_props_state</Link></li>
+          <li><Link to="props">02_props</Link></li>
+          <li><Link to="state">03_state</Link></li>
+          <li><Link to="mapping">04_component_mapping</Link></li>
         </ol>
         {this.props.children}
       </div>
