@@ -1,5 +1,8 @@
+var webpack = require('webpack');
+
 module.exports = {
-  entry: './src/index.js',
+  // entry: './src/index.js',
+  entry: ['react-hot-loader/patch', './src/index.js'], // hot-loader 사용 하기 위해 변경
 
   output: {
     path: __dirname + '/public/',
@@ -10,7 +13,7 @@ module.exports = {
     hot: true,
     inline: true,
     host: '0.0.0.0',
-    port: 8080,
+    port: 4000,
     historyApiFallback: true, // 직접 주소로 연결 할 경우 이슈 해결
     contentBase: __dirname + '/public/'
   },
@@ -23,13 +26,14 @@ module.exports = {
         exclude: /node_modules/,
         query: {
             cacheDirectory: true,
-            presets: ['es2015', 'react']
+            presets: ['es2015', 'react'],
+            plugins: ["react-hot-loader/babel"]
         }
       }
     ]
   },
 
   plugins: [
-    new webpack.HotModuleReplaceMentPlugin()
+    new webpack.HotModuleReplacementPlugin()
   ]
 };
