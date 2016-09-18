@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 /* Props & State */
 class Props extends React.Component {
@@ -36,4 +36,4 @@ PropsState.propTypes = {
   number: React.PropTypes.number.isRequired
 }
 
-export default PropsState
+export default PropsState;

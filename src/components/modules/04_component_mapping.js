@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class ContactInfo extends React.Component {
   render() {
@@ -56,6 +56,7 @@ class App extends React.Component {
 /*
 1. Contact의 state 정의
 2. mapToComponent 함수 정의
+3. javascript의 map 내장함수를 이용하여 ContactInfo Component 배열 리턴
 */
 
-export default App
+export default App;

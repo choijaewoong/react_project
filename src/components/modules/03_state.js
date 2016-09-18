@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class State extends React.Component {
 
@@ -7,7 +7,7 @@ class State extends React.Component {
     this.state = {
       value: 0
     };
-    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this);
   }
 
   // 버튼을 눌렀을때 호출되는 메소드
@@ -27,4 +27,4 @@ class State extends React.Component {
   }
 }
 
-export default State
+export default State;
