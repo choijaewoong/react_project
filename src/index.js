@@ -1,6 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import OtherApp from './components/App';
+import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
+import {App, OtherBasic, PropsState} from './components/App';
 
-const rootElement = document.getElementById('root');
-ReactDOM.render(<OtherApp/>, rootElement);
+ReactDOM.render(<Router history = {browserHistory}>
+  <Route path = "/" component = {App}>
+    <IndexRoute component = {OtherBasic} />
+    <Route path = "basic" component = {OtherBasic} />
+    <Route path = "props_state" component = {PropsState} />
+  </Route>
+</Router>, document.getElementById('root'));
+// ReactDOM.render(<OtherApp/>, document.getElementById('root'));

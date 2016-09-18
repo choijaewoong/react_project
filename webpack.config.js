@@ -9,6 +9,7 @@ module.exports = {
     devServer: {
         inline: true,
         port: 8080,
+        historyApiFallback: true, // 직접 주소로 연결 할 경우 이슈 해결
         contentBase: __dirname + '/public/'
     },
 
